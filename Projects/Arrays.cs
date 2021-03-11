@@ -29,6 +29,7 @@ namespace Projects
         public static int GetMaxValueFromArray(int[] arr)
         {
             int max = 0;
+
             for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i] > arr[max])
@@ -62,6 +63,7 @@ namespace Projects
         public static int GetSumArrayElementsWithOddIndex(int[] arr)
         {
             int sum = 0;
+
             for (int i = 1; i < arr.Length; i += 2)
             {
                 sum += arr[i];
@@ -73,14 +75,13 @@ namespace Projects
         public static int[] GetReverseArray(int[] arr)
         {
             int temp = 0;
+
             for (int i = 0; i < arr.Length / 2; i++)
             {
                 temp = arr[i];
                 arr[i] = arr[arr.Length - 1 - i];
                 arr[arr.Length - 1 - i] = temp;
             }
-            
-
 
             return arr;
         }
@@ -88,6 +89,7 @@ namespace Projects
         public static int CountTheNumberOfOddElementsInArray(int[] arr)
         {
             int odd = 0;
+
             for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i] % 2 == 1)
@@ -124,20 +126,14 @@ namespace Projects
                         min = j;
                     }
                 }
-                int tmp = arr[i];
-                arr[i] = arr[min];
-                arr[min] = tmp;
+                Variables.Swap(ref arr[i], ref arr[min]);
             }
-
-            Console.WriteLine();
-
 
             return arr;
         }
 
         public static int[] SortArrayFromBiggestToSmallest(int[] arr)
         {
-            int tmp;
             for (int i = 1; i < arr.Length; i++)
             {
                 int j = i;
@@ -147,7 +143,6 @@ namespace Projects
                     j--;
                 }
             }
-
 
             return arr;
         }
