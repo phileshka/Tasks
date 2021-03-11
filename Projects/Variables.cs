@@ -4,11 +4,11 @@ namespace Projects
 {
     public static class Variables
     {
-        public static int GetDecision(int A, int B)
+        public static int GetDecision(int a, int b)
         {
-            if ((B - A) != 0)
+            if ((b - a) != 0)
             {
-                return (5 * A + B * B) / (B - A);
+                return (5 * a + b * b) / (b - a);
             }
 
             throw new Exception("A = B");
