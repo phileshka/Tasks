@@ -23,16 +23,7 @@ namespace Projects
 
         public static int GetMinValueFromArray(int[] arr)
         {
-            int min = 0;
-            for (int i = 0; i < arr.Length; i++)
-            {
-                if (arr[i] < arr[min])
-                {
-                    min = i;
-                }
-            }
-
-            return arr[min];
+            return arr[GetIndexMinValueFromArray(arr)];
         }
 
         public static int GetMaxValueFromArray(int[] arr)
