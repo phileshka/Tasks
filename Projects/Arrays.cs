@@ -56,16 +56,7 @@ namespace Projects
 
         public static int GetIndexMaxValueFromArray(int[] arr)
         {
-            int max = 0;
-            for (int i = 0; i < arr.Length; i++)
-            {
-                if (arr[i] > arr[max])
-                {
-                    max = i;
-                }
-            }
-
-            return max;
+            return arr[GetMaxValueFromArray(arr)];
         }
 
         public static int GetSumArrayElementsWithOddIndex(int[] arr)
@@ -89,10 +80,7 @@ namespace Projects
                 arr[arr.Length - 1 - i] = temp;
             }
             
-            for (int i = 0; i < arr.Length; i++)
-            {
 
-            }
 
             return arr;
         }
@@ -102,7 +90,7 @@ namespace Projects
             int odd = 0;
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] % 2 != 0)
+                if (arr[i] % 2 == 1)
                 {
                     odd++;
                 }
@@ -114,17 +102,11 @@ namespace Projects
         public static int[] ReverseFirstHalfOfArrayWithSecond(int[] arr)
         {
             const int arraylength = 10;
-            int temp = 0;
-            for (int i = 0; i < arraylength; ++i)
-            {
-                temp = arr[i];
-                arr[i] = arr[(i + arraylength) / (2 + arraylength % 2)];
-                arr[(i + arraylength) / (2 + arraylength % 2)] = temp;
-            }
+            var slide = arraylength / 2 + arraylength % 2;
 
             for (int i = 0; i < arraylength; ++i)
             {
-                
+                Variables.Swap(ref arr[i], ref arr[i + slide]);
             }
 
             return arr;
@@ -149,10 +131,6 @@ namespace Projects
 
             Console.WriteLine();
 
-            for (int i = 0; i < arr.Length; i++)
-            {
-                
-            }
 
             return arr;
         }
@@ -165,17 +143,11 @@ namespace Projects
                 int j = i;
                 while (j > 0 && arr[j] > arr[j - 1])
                 {
-                    tmp = arr[j];
-                    arr[j] = arr[j - 1];
-                    arr[j - 1] = tmp;
+                    Variables.Swap(ref arr[j], ref arr[j - 1]);
                     j--;
                 }
             }
 
-            for (int i = 0; i < arr.Length; i++)
-            {
-                
-            }
 
             return arr;
         }
