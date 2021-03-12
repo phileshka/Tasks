@@ -75,12 +75,12 @@ namespace Projects
             }
         }
 
-        public static double FindD(double a, double b, double c)
+        private static double FindD(double a, double b, double c)
         {
             return b * b - 4 * a * c;
         }
 
-        public static double[] FindOneX(double a, double b)
+        private static double[] FindOneX(double a, double b)
         {
             if (a == 0)
             {
@@ -91,7 +91,7 @@ namespace Projects
             return new double[] { x };
         }
 
-        public static double[] FindTwoX(double a, double b, double D)
+        private static double[] FindTwoX(double a, double b, double D)
         {
             if (a == 0)
             {
@@ -107,7 +107,7 @@ namespace Projects
             return new double[] { x1, x2 };
         }
 
-        public static double[] FindZeroX()
+        private static double[] FindZeroX()
         {
             return new double[0];
         }

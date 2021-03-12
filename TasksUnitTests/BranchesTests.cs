@@ -39,6 +39,11 @@ namespace TasksUnitTests
             Assert.AreEqual(expected, actual);
         }
 
+        public void GetSquareEquation_WhenValidValues_ShouldRerurnRoots(double a, double b, double c,int expected)
+        {
+
+        }
+
         [TestCase(19, "Девятнадцать")]
         [TestCase(10, "Десять")]
         [TestCase(25, "Двадцать Пять")]

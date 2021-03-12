@@ -50,13 +50,13 @@ namespace CyclesTests
             Assert.AreEqual(expected, actual);
         }
 
-        //[TestCase(1, 14, 7)]
-        //public void GetSumOfAllNumbersThatDivideOnSeven_WhenWithoutResidue_ShouldRerunSum(int a, int b, int expected)
-        //{
-        //    int actual = Cycles.GetSumOfAllNumbersThatDivideOnSevenWithoutResidue(a, b);
+        [TestCase(15, 6, 21)]
+        public void GetSumOfAllNumbersThatDivideOnSeven_WhenWithoutResidue_ShouldRerunSum(int a, int b, int expected)
+        {
+            int actual = Cycles.GetSumOfAllNumbersThatDivideOnSevenWithoutResidue(a, b);
 
-        //    Assert.AreEqual(expected, actual);
-        //}
+            Assert.AreEqual(expected, actual);
+        }
 
         [Test]
         public void GetSumOfAllNumbersThatDivideOnSeven_WhenWithResidue_ShouldRerunException()
@@ -74,13 +74,13 @@ namespace CyclesTests
             Assert.AreEqual(expected, actual);
         }
 
-        [Test]
-        public void GetTheNumberOfFibonacciLine_WhenFibonacciIsNotValid_ShouldReturnException()
-        {
-            Assert.Throws<IndexOutOfRangeException>(() => Cycles.GetTheNumberOfFibonacciLine(49));
-        }
+        //[Test]
+        //public void GetTheNumberOfFibonacciLine_WhenFibonacciIsNotValid_ShouldReturnException()
+        //{
+        //    Assert.Throws<IndexOutOfRangeException>(() => Cycles.GetTheNumberOfFibonacciLine(49));
+        //}
 
-        [TestCase(22,11,11)]
+       [TestCase(22,11,11)]
        [TestCase(100,70,10)]
        [TestCase(12,7,1)]
         public void GetTheirGreatestCommonDivisorUsingEuclidAlgorithm_WhenValidAAndB_ShourdReturnDivisior(int a,int b,int expected)
