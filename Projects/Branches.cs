@@ -7,6 +7,7 @@ namespace Projects
         public static int CalculateValue(int a, int b)
         {
             int result;
+            
             if (a > b)
             {
                 result = a + b;

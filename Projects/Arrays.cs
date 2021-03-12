@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projects
 {
-     public static class Arrays
+    public static class Arrays
     {
         public static int[] GenerateAndFillArray()
         {
@@ -77,7 +77,7 @@ namespace Projects
         {
             for (int i = 0; i < arr.Length / 2; i++)
             {
-                Variables.Swap(ref arr[i], ref arr[arr.Length-1-i]);
+                Variables.Swap(ref arr[i], ref arr[arr.Length - 1 - i]);
             }
 
             return arr;
@@ -91,7 +91,7 @@ namespace Projects
             {
                 if (arr[i] % 2 == 1)
                 {
-                    odd++;
+                    ++odd;
                 }
             }
 
@@ -124,6 +124,7 @@ namespace Projects
                         min = j;
                     }
                 }
+
                 Variables.Swap(ref arr[i], ref arr[min]);
             }
 

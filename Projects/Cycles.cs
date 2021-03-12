@@ -90,8 +90,8 @@ namespace Projects
                 int b = 1;
                 int sum = 0;
 
-                int j = 2;
-                while (j <= n)
+                int j = 1;
+                while (++j <= n)
                 {
                     sum = a + b;
                     a = b;
@@ -107,10 +107,15 @@ namespace Projects
             while (a != b)
             {
                 if (a > b)
+                {
                     a -= b;
+                }
                 else
+                {
                     b -= a;
+                }
             }
+
             return a;
         }
 
