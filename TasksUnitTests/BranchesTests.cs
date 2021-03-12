@@ -39,14 +39,14 @@ namespace TasksUnitTests
             Assert.AreEqual(expected, actual);
         }
 
-        //[TestCase(19, "Девятнадцать")]
-        //[TestCase(10, "Десять")]
-        //[TestCase(25, "Двадцать Пять")]
-        //public void GetNumber_WhenValueIsValid_ShouldReturnString(int value, string expected)
-        //{
-        //    string actual = Branches.GetNumber(value);
+        [TestCase(19, "Девятнадцать")]
+        [TestCase(10, "Десять")]
+        [TestCase(25, "Двадцать Пять")]
+        public void GetNumber_WhenValueIsValid_ShouldReturnString(int value, string expected)
+        {
+            string actual = Branches.GetNumber(value);
 
-        //    Assert.AreEqual(expected, actual);
-        //}
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

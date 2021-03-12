@@ -136,6 +136,10 @@ namespace Projects
             {
                 switch (value)
                 {
+
+                    case 10:
+                        result += "Десять";
+                        break;
                     case 11:
                         result += "Одинадцать";
                         break;
@@ -174,9 +178,6 @@ namespace Projects
                 string tens = string.Empty;
                 switch (tens1)
                 {
-                    case 1:
-                        tens = "Десять";
-                        break;
                     case 2:
                         tens = "Двадцать";
                         break;
