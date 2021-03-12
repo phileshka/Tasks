@@ -91,6 +91,7 @@ namespace Projects
                 int sum = 0;
 
                 int j = 1;
+                
                 while (++j <= n)
                 {
                     sum = a + b;
@@ -98,6 +99,7 @@ namespace Projects
                     b = sum;
                     j++;
                 }
+
                 return a;
             }
         }
